@@ -6,8 +6,10 @@ import tech.pcloud.framework.security.model.DHKeyPair;
 import javax.crypto.Cipher;
 import javax.crypto.KeyAgreement;
 import javax.crypto.SecretKey;
+import javax.crypto.SecretKeyFactory;
 import javax.crypto.interfaces.DHPrivateKey;
 import javax.crypto.interfaces.DHPublicKey;
+import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.DHParameterSpec;
 import java.security.*;
 import java.security.spec.PKCS8EncodedKeySpec;
@@ -120,9 +122,11 @@ public class DHCoderUtil {
         keyAgree.doPhase(pubKey, true);
 
         // 生成本地密钥
-
-        SecretKey secretKey = keyAgree.generateSecret(SECRET_ALGORITHM);////DES、3DES、AES
-
+        byte secret[] = keyAgree.generateSecret();
+        SecretKeyFactory skf = SecretKeyFactory.getInstance(SECRET_ALGORITHM);
+        DESKeySpec desSpec = new DESKeySpec(secret);
+        SecretKey secretKey = skf.generateSecret(desSpec);
+//        SecretKey secretKey = keyAgree.generateSecret();////DES、3DES、AES
         return secretKey;
     }
 }

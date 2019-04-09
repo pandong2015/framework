@@ -5,7 +5,7 @@
     <groupId>tech.pcloud</groupId>
     <artifactId>framework</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.2</version>
+    <version>0.0.2-SNAPSHOT</version>
     <modules>
         <module>framework-spring-boot</module>
         <module>framework-utility</module>
@@ -21,7 +21,7 @@
         <connection>scm:git:https://github.com/pandong2015/framework.git</connection>
         <url>https://github.com/pandong2015/framework</url>
         <developerConnection>scm:git:https://github.com/pandong2015/framework.git</developerConnection>
-        <tag>v0.0.2</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <properties>

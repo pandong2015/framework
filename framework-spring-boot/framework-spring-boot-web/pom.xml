@@ -37,5 +37,17 @@
             <groupId>tech.pcloud</groupId>
             <artifactId>framework-utility-http</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>tech.pcloud</groupId>
+            <artifactId>framework-utility-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>tech.pcloud</groupId>
+            <artifactId>framework-spring-boot-swagger</artifactId>
+        </dependency>
     </dependencies>
 </project>

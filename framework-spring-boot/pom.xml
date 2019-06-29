@@ -16,6 +16,9 @@
         <module>framework-spring-boot-jdbc-druid</module>
         <module>framework-spring-boot-lucene</module>
         <module>framework-spring-boot-httpclient</module>
+        <module>framework-spring-boot-web-thymeleaf</module>
+        <module>framework-spring-boot-scheduler</module>
+        <module>framework-spring-boot-swagger</module>
     </modules>
 
     <dependencies>

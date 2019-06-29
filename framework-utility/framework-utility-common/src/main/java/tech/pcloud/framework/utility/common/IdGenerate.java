@@ -1,7 +1,8 @@
 package tech.pcloud.framework.utility.common;
 
 
-import java.util.Calendar;
+import java.util.Random;
+import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * 64位ID (42(毫秒)+10(机器码)+12(重复累加))
@@ -45,7 +46,7 @@ public class IdGenerate {
    * @return 唯一ID
    */
   public static long generate(long id, long machineId) {
-    long time = (System.currentTimeMillis() / 1000) << OFFSET_TIMESTAMP;
+    long time = System.nanoTime() << OFFSET_TIMESTAMP;
     long result = (time | machineId | (id & 0XFFF));
 //    System.out.println(time + " - " + machineId + " - " + (id & 0XFFF) + " --> "+result);
     return result;
@@ -56,11 +57,12 @@ public class IdGenerate {
   }
 
   public static void main(String[] args) {
-    /*AtomicLong sequence = new AtomicLong();
+    Random r = new Random();
+    AtomicLong sequence = new AtomicLong();
     for (int i = 0; i < 10; i++) {
-      generate(sequence.getAndIncrement());
-    }*/
-    Calendar c = Calendar.getInstance();
-    System.out.println(c.get(Calendar.SECOND));
+      System.out.println(generate(0));
+    }
+//    Calendar c = Calendar.getInstance();
+//    System.out.println(c.get(Calendar.SECOND));
   }
 }

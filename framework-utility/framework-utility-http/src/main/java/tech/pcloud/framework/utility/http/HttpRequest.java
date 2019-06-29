@@ -1,5 +1,6 @@
 package tech.pcloud.framework.utility.http;
 
+import com.alibaba.fastjson.JSON;
 import lombok.Data;
 import okhttp3.MediaType;
 import okhttp3.RequestBody;
@@ -65,4 +66,11 @@ public class HttpRequest<T> {
         this.body = RequestBody.create(mediaType, body);
     }
 
+    public <X> void setJsonBody(X body) {
+        setJsonBody(JSON.toJSONString(body));
+    }
+
+    public void setJsonBody(String body) {
+        setBody(MediaType.parse("application/json"), body);
+    }
 }

@@ -1,0 +1,2 @@
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=tech.pcloud.framework.springboot.jdbc.druid.config.DruidDataSourceAutoConfiguration

@@ -39,7 +39,7 @@
         <log4j-version>2.10.0</log4j-version>
         <guava.version>23.0</guava.version>
         <protobuf-java-version>3.5.0</protobuf-java-version>
-        <netty-version>4.1.18.Final</netty-version>
+        <netty-version>4.1.42.Final</netty-version>
         <lucene.version>7.4.0</lucene.version>
         <swagger.version>2.9.2</swagger.version>
     </properties>

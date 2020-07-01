@@ -35,7 +35,7 @@
         <sqlite.version>3.23.1</sqlite.version>
         <spring.boot.mybatis.version>1.3.1</spring.boot.mybatis.version>
         <mariadb.version>2.2.5</mariadb.version>
-        <mysql.version>8.0.11</mysql.version>
+        <mysql.version>8.0.16</mysql.version>
         <log4j-version>2.10.0</log4j-version>
         <guava.version>23.0</guava.version>
         <protobuf-java-version>3.5.0</protobuf-java-version>
